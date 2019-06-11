@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap');
+
+body {
+  background-color: #E5E5E5;
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+}
+
+.header {
+  position:fixed;
+}
+
+h1{
+  color: #07294f;
+  font-size: 60px;
+  font-family: 'Lora';
+  text-align: left;
+  margin: 2px;
+}
+
+.txt{
+  color: #07294f;
+  font-size: 22px;
+  font-family: 'Lora';
+  text-align: left;
+  line-height: 10px;
+}
+
+#loud {
+  font-family: 'Lora';
+  font-size: 60px;
+  line-height: 20px;
+}
+
+#centered {
+  text-align: center;
+  line-height: 10px;
+}
+
+#bio {
+  line-height: 28px;
+  padding-left: 16px;
+}
+
+.name {
+  float: left;
+  width: 70%;
+}
+
+.directory {
+  float: left;
+  width: 30%;
+}
+
+.directory .txt {
+  font-family: 'Lora';
+  font-size: 23px;
+  text-align: right;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.column-left {
+  flex: 35%;
+  max-width: 35%;
+}
+
+.column-right {
+  flex: 65%;
+  max-width: 65%;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+  max-width: 100%;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.imgcontainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #E5E5E5;
+}
