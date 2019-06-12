@@ -49,7 +49,7 @@ a {
 }
 
 .muted {
-  color: #81a0c1;
+  color: #81a0c1 !important;
 }
 
 .muted:hover {
@@ -119,8 +119,15 @@ a {
 }
 
 .column {
-  flex: 50%;
-  max-width: 50%;
+  flex: 48%;
+  max-width: 48%;
+  padding: 0 6px;
+}
+
+.column-thirds {
+  flex: 31%;
+  max-width: 31%;
+  padding: 0 6px;
 }
 
 .work-col {
@@ -196,9 +203,9 @@ img {
 }
 
 .proj {
-  padding-top: 50px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-top: 40px;
+  padding-left: 300px;
+  padding-right: 300px;
 }
 
 .proj .txt{
