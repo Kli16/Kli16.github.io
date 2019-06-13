@@ -149,7 +149,7 @@ a {
 img {
   display: block;
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: auto;
   max-width: 100%;
 }
 
