@@ -2,53 +2,204 @@
 <html style="height: 100%">
   <head>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="libraries/animate.min.css">
-    <title> Kevin Li </title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <title> Kevin Li </title>
+      <script src="script.js"></script>
     </head>
   <body>
+      <a href="#home">home</a>
+      <div class="body" id="home">
+      <div class="navbar fade">
+    <ul class="kevin">
+    <li><a><img class="navimag" src="images/name.png"></a></li>
+    </ul>
+    <ul class="nav">
+    <li><a href="#art"><img class="navimag" src="images/art.png"></a></li> 
+    <li><a href="#code"><img class="navimag" src="images/code.png"></a></li>
+    <li><a href="resume.pdf" target="_blank"><img class="navimag" src="images/resume.png"></a></li>
+    </ul>
+    </div>
+    <div class="row">
+        
+        <div class="picture">
+        <img class="profpic fade" src="images/mountain.jpg">
+        <div class="contactrow fade">
+            <a href="https://www.linkedin.com/in/kevinkevin-li/" target="_blank"><img class="contactimg" src="images/linkedin.png"></a>
+            <a href="https://github.com/Kli16" target="_blank"><img class="contactimg" src="images/github.png" ></a>
+            <a href="mailto:kevinli35@berkeley.edu" target="_top"><img class="contactimg" src="images/gmail.png" ></a>
+        </div>
+        </div>
+        
+        <div class="column fade">
+            <div class="about">
+        <p> Hi! My name is Kevin. I'm a Computer Science and Philosophy
+        undergrad at UC Berkeley, interested in entrepreneurship in tech and art finance.</p>
+    
+        <p> In my free time I play tennis and volleyball, coach high school debate, and watch the crime/mystery genre. </p>
+            
+        <p> In my not so free time, my favorite ways to procrastinate are playing tetris, watching funny stuff happen on twitter, or having extended conversations about everything and nothing. </p>
+    
+        <p> Currently on the lookout for cool opportunities, collaborations, and good conversation.</p>
+            </div>
+        </div>
+    
+    </div>
+    </div>
+      <div class="body" id="art">
+     <div class="navbar">
+    <ul class="kevin">
+    <li><a href="#home"><img class="navimag close" src="images/name.png"></a></li>
+    </ul>
+    <ul class="nav">
+    <li><a><img class="navimag" src="images/art.png"></a></li> 
+    <li><a href="#code"><img class="navimag close" src="images/code.png"></a></li>
+    <li><a href="resume.pdf" target="_blank"><img class="navimag close" src="images/resume.png"></a></li>
+    </ul>
+    </div>
 
-<div class="body">
- <div id="header">
-
-   <div class="row">
-     <div class="name">
-       <p class="txt animated swing" id="loud"> Hi, my name is Kevin Li. </p>
-     </div>
-
-     <div class="directory">
-       <p class="txt animated fadeIn" id="home"> Home </p>
-       <p class="txt animated fadeIn muted" id="education"> <a href="education.html"> Education </a> </p>
-       <p class="txt animated fadeIn muted" id="work"> <a href="work.html"> Work </a> </p>
-       <p class="txt animated fadeIn muted" id="work"> <a href="notwork.html"> Not Work </a> </p>
-       <p class="txt animated fadeIn muted" id="resume"> Resume </p>
-     </div>
-   </div>
-
+    <div class="slide-wrapper fade">
+    <div class="scroll-left">
+    <img class="fade scroll" src="images/left.png" onclick="plusDivs(-1)">
+    </div>
+          
+    <div class="gallery">
+    <div class="artimg fade" style="opacity: 1;"> 
+        <img class="artimg-sub" src="images/art/tokyo.jpg">
+    </div>
+    <div class="artimg">
+        <img class="artimg-sub" src="images/art/setup1.png">
+        <img class="artimg-sub" src="images/art/setup2.png">
+        <img class="artimg-sub" src="images/art/setup3.png">
+    </div>
+    <div class="artimg"> 
+        <img class="artimg-sub" src="images/art/boat.jpg">
+    </div>
+    <div class="artimg"> 
+        <img class="artimg-sub" src="images/art/lit2.png">
+    </div>
+    <div class="artimg"> 
+        <img class="artimg-sub" src="images/art/mountains.jpg">
+    </div> 
+    <div class="artimg"> 
+        <img class="artimg-sub" src="images/art/people1.png">
+    </div> 
+    <div class="artimg"> 
+        <img class="artimg-sub" src="images/art/collage.jpg">
+    </div>     
+    </div>
+          
+    <div class="scroll-right">
+    <img class="fade scroll" src="images/right.png" onclick="plusDivs(1)">
+    </div>
+        
+    </div>
+    <p class="artcap" style="display: block;">Tokyo. Watercolor.</p>
+    <p class="artcap">Painting Sound. Arduino, Processing, OpenCV.</p>
+    <p class="artcap">Oil.</p>      
+    <p class="artcap">Adobe Illustrator.</p>
+    <p class="artcap">Acrylic.</p>
+    <p class="artcap">Cinema 4D.</p>
+    <p class="artcap">Watercolor and Cutouts.</p>
+          
+<div class="units-wrap">
+  <img class="units units-color" src="images/unit.png" onclick="currentDiv(1)">
+  <img class="units" src="images/unit.png" onclick="currentDiv(2)"> 
+    <img class="units" src="images/unit.png" onclick="currentDiv(3)"> 
+    <img class="units" src="images/unit.png" onclick="currentDiv(4)"> 
+    <img class="units" src="images/unit.png" onclick="currentDiv(5)"> 
+    <img class="units" src="images/unit.png" onclick="currentDiv(6)"> 
+    <img class="units" src="images/unit.png" onclick="currentDiv(7)"> 
 </div>
-
-<div id="body">
-
-  <div class="row">
-    <div class="column-left animated fadeIn">
-      <img src="images/profile.jpg">
-      </div>
-    <div class="column-right">
-      <p class="txt animated fadeIn" id="bio"> I'm from Queens, NYC. </p>
-      <p class="txt animated fadeIn" id="bio"> I am a second-year Computer Science and Philosophy major at UC Berkeley. </p>
-      <p class="txt animated fadeIn" id="bio"> The things that I enjoy about life include web dev, programming problems,
-        entrepreneurship, 3D modeling, computer animation, digital art, oil painting, Agatha Christie novels, post-modern
-        philosophy, religion, the history and politics of race in America, debate pedagogy, Chinese indie music, the Beatles,
-        Iron Man, bossa nova, Summer Salt, friendship, volleyball, Tetris, brunch @ 2 in the afternoon, and learning.</p>
-      <p class="txt animated fadeIn" id="bio"> For new friendships and collaboration, catch me on
-        <a href="https://www.facebook.com/kevvinkeviinli">Facebook</a>,
-       <a href="https://twitter.com/whodatmushroom"> Twitter</a>,
-       <a href="https://www.linkedin.com/in/kevinkevin-li/"> LinkedIn</a>, or
-       <a href="https://www.instagram.com/kevinliart/"> Instagram</a>. </p>
-      </div>
-   <br>
-  </div>
-
- </div>
- </div>
-</body>
+          
+    </div>
+      
+      <div class="body" id="code">
+     <div class="navbar">
+    <ul class="kevin">
+    <li><a href="#home"><img class="navimag" src="images/name.png"></a></li>
+    </ul>
+    <ul class="nav">
+    <li><a href="#art"><img class="navimag" src="images/art.png"></a></li> 
+    <li><a href="#code"><img class="navimag" src="images/code.png"></a></li>
+    <li><a href="resume.pdf" target="_blank"><img class="navimag" src="images/resume.png"></a></li>
+    </ul>
+    </div>
+    <div class="table">
+        <div class="project-wrapper">
+            <div class="graphic-wrapper">
+                <a href="https://github.com/Kli16/GraphicsEngine" target="_blank"> <img class="proj-graphic" src="images/code/graphics%20for%20website-17.png"></a>
+            </div>
+            <div class="proj-text fade">
+                <p class="proj-title">GRAPHICS ENGINE</p>
+                <br>
+                <p class="proj-lang"> Python</p>
+                <br>
+                <p class="proj-desc"> A graphics generator with lighting, shading, animation, and a compiler.</p>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="graphic-wrapper">
+                <a href="https://github.com/Kli16/SesameBagels" target="_blank"><img class="proj-graphic" src="images/code/graphics%20for%20website-21.png"> </a>
+            </div>
+            <div class="proj-text">
+                <p class="proj-title">GITRUNNER</p>
+                <br>
+                <p class="proj-lang"> Processing/Java</p>
+                <br>
+                <p class="proj-desc"> A 3D remote-controlled octocat game using webcam image processing.</p>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="graphic-wrapper">
+                <a href="https://github.com/peterdjlee/Systems_Final_Project" target="_blank"> <img class="proj-graphic" src="images/code/graphics%20for%20website-20.png"> </a>
+            </div>
+            <div class="proj-text">
+                <p class="proj-title">NODE</p>
+                <br>
+                <p class="proj-lang">C</p>
+                <br>
+                <p class="proj-desc"> A note-taking program that allows students to take notes and compile example code simultaneously.</p>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="graphic-wrapper">
+                <a href="https://github.com/Kli16/PepTalk" target="_blank"> <img class="proj-graphic" src="images/code/graphics%20for%20website-19.png"></a>
+            </div>
+            <div class="proj-text">
+                <p class="proj-title">PEPTALK</p>
+                <br>
+                <p class="proj-lang"> Django, HTML, CSS</p>
+                <br>
+                <p class="proj-desc"> A website to help underresourced high-school debaters 
+                find resources and mentorship across the country.</p>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="graphic-wrapper">
+                <a href="https://github.com/Kli16/Monotunes" target="_blank"> <img class="proj-graphic" src="images/code/graphics%20for%20website-18.png"> </a>
+            </div>
+            <div class="proj-text">
+                <p class="proj-title">MONOTUNES</p>
+                <br>
+                <p class="proj-lang"> Python</p>
+                <br>
+                <p class="proj-desc"> A searchable lyrics library that produces audio files using
+                    the Watson Text to Speech and Musixmatch APIs.</p>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="graphic-wrapper">
+                <a href="https://github.com/gaoj123/Chillin-in-the-Front-Seats" target="_blank"><img class="proj-graphic" src="images/code/graphics%20for%20website-16.png"></a>
+            </div>
+            <div class="proj-text">
+                <p class="proj-title">DRAWNET</p>
+                <br>
+                <p class="proj-lang"> Flask, Python</p>
+                <br>
+                <p class="proj-desc"> A pictionary-style game where users compete to both draw precisely and guess other player's drawings.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </body>
 </html>

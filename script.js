@@ -1,56 +1,88 @@
-var all = document.getElementById("all");
-var code = document.getElementById("code");
-var not = document.getElementById("not-code");
+function fadeOut( elem, ms )
+{
+  if( ! elem )
+    return;
 
-var open_all = function(e) {
-  code.classList.add("muted");
-  not.classList.add("muted");
-  all.classList.remove("muted");
-
-  var elements = document.getElementsByClassName('noncode');
-  for (var i=0; i<elements.length; i++) {
-    elements[i].classList.remove("ghost");
+  if( ms )
+  {
+    var opacity = 1;
+    var timer = setInterval( function() {
+      opacity -= 50 / ms;
+      if( opacity <= 0 )
+      {
+        clearInterval(timer);
+        opacity = 0;
+        elem.style.visibility = "hidden";
+      }
+      elem.style.opacity = opacity;
+      elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+    }, 50 );
   }
-
-  elements = document.getElementsByClassName('code');
-  for (var i=0; i<elements.length; i++) {
-    elements[i].classList.remove("ghost");
-  }
-}
-
-var open_code = function(e) {
-  console.log("yeag");
-  code.classList.remove("muted");
-  not.classList.add("muted");
-  all.classList.add("muted");
-
-  var elements = document.getElementsByClassName('noncode');
-  for (var i=0; i<elements.length; i++) {
-    elements[i].classList.add("ghost");
-  }
-
-  elements = document.getElementsByClassName('code');
-  for (var i=0; i<elements.length; i++) {
-    elements[i].classList.remove("ghost");
+  else
+  {
+    elem.style.opacity = 0;
+    elem.style.filter = "alpha(opacity=0)";
+    elem.style.visibility = "hidden";
   }
 }
 
-var open_notcode = function(e) {
-  code.classList.add("muted");
-  not.classList.remove("muted");
-  all.classList.add("muted");
+function fadeIn( elem, ms )
+{
+  if( ! elem )
+    return;
 
-  var elements = document.getElementsByClassName('code');
-  for (var i=0; i<elements.length; i++) {
-    elements[i].classList.add("ghost");
+  elem.style.opacity = 0;
+  elem.style.filter = "alpha(opacity=0)";
+  elem.style.visibility = "visible";
+
+  if( ms )
+  {
+    var opacity = 0;
+    var timer = setInterval( function() {
+      opacity += 50 / ms;
+      if( opacity >= 1 )
+      {
+        clearInterval(timer);
+        opacity = 1;
+      }
+      elem.style.opacity = opacity;
+      elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+    }, 50 );
   }
-
-  elements = document.getElementsByClassName('noncode');
-  for (var i=0; i<elements.length; i++) {
-    elements[i].classList.remove("ghost");
+  else
+  {
+    elem.style.opacity = 1;
+    elem.style.filter = "alpha(opacity=1)";
   }
 }
 
-all.addEventListener("click", open_all);
-code.addEventListener("click", open_code);
-not.addEventListener("click", open_notcode);
+var slideIndex = 1;
+
+function plusDivs(n) {
+  showDivs(slideIndex + n);
+}
+
+function currentDiv(n) {
+  showDivs(n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("artimg");
+  var caps = document.getElementsByClassName("artcap");
+  var dots = document.getElementsByClassName("units");
+  if (n != slideIndex) {
+  fadeOut(x[slideIndex - 1], 200);
+  caps[slideIndex-1].style.display = "none";
+  }
+  slideIndex = n;
+  
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+    caps[slideIndex-1].style.display = "block";
+    setTimeout(() => { fadeIn(x[slideIndex-1], 200);}, 150);
+    for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" units-color", "");
+    }
+  dots[slideIndex-1].className += " units-color";
+}
