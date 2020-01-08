@@ -19,6 +19,7 @@ body {
     bottom: 0px;
     width: 100%;
     background-color: #343540;
+    overflow: scroll;
 }
 
 .body#home:target .row {
@@ -32,7 +33,7 @@ body {
 .body#art {
     position: absolute;
     margin: 0px;
-    overflow:auto;
+    overflow: scroll;
     top: 0px;
     bottom: 0px;
     width: 100%;
@@ -52,7 +53,7 @@ body {
 .body#code {
     position: absolute;
     margin: 0px;
-    overflow: hidden;
+    overflow: scroll;
     top: 0px;
     bottom: 0px;
     width: 100%;
@@ -89,6 +90,7 @@ a {
 .column {
     width: 60%;
     float: right;
+    display: inline-block;
 }
 
 .picture {
@@ -97,6 +99,115 @@ a {
     padding-left: 6%;
     padding-right: 6%;
     text-align: center;
+}
+
+@media (max-width: 430px) {
+    .body#home {
+        overscroll-behavior: contain;
+    }
+    
+    
+    .body#code {
+        
+    }
+    
+    .picture {
+        width: 100%;
+    }
+    
+    .column {
+        width: 100%;
+        padding-left: 6%;
+        padding-right: 6% !important;
+        text-align: center;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    .about {
+        padding-right: 0 !important;
+        top: 100%;
+        padding-top: 0 !important;
+    }
+    
+    .contactrow {
+        padding-right: 0 !important;
+    }
+    
+    .nav {
+        width: 100%;
+        display: inline-block;
+        justify-content: center !important;
+        text-align: center;
+    }
+    
+    .kevin {
+        width: 100%;
+        display: flex;
+        justify-content: center !important;
+        text-align: center;
+        justify-content: flex-end;
+    }
+    .navimag {
+        height: 20px !important;
+    }
+    .kevimg {
+        display: inline-block !important;
+        height: 38px !important;
+    }
+    
+    ul {
+        padding-top: 3px !important;
+    }
+    li {
+        display: inline-block;
+    }
+    
+    .navbar {
+        padding-top: 10px;
+        display: inline-block;
+    }
+    
+    .profpic {
+        width: 60%;
+        padding-bottom: 0;
+    }
+    
+    .units {
+        width: 10% !important;
+    }
+    
+    .units-color {
+        width: 10% !important;
+    }
+    
+    .special {
+        width: 30%;
+    }
+    
+    .project-wrapper {
+        width: 100% !important;
+        height: 20% !important;
+    }
+    
+    .table {
+        height: 100% !important;
+    }
+    
+    .proj-graphic {
+        filter: grayscale(0%) !important;
+    }
+    
+}
+
+@media (max-width: 800px) and (min-width: 431px) {
+    .about {
+        padding-right: 10% !important;
+        top: 100%;
+        padding-top: 0 !important;
+    }
 }
 
 .about {
@@ -122,7 +233,8 @@ li {
 
 .kevin {
     float: left;
-    padding-left: 2%;
+    padding-left: 3%;
+    text-align: center;
 }
 
 .nav {
@@ -137,14 +249,26 @@ li {
 
 .contactrow {
     padding-bottom: 20px;
+    padding-right: 20%;
+    text-align: center;
 }
+
 .contact {
     width:80%;
 }
 
 .navimag {
-    height: 40px;
+    height: 35px;
     transition: height .4s;
+}
+
+.kevimg {
+    height: 38px;
+}
+
+.navbar {
+    height: 80px;
+    position: relative;  
 }
 
 .navimag:hover {
@@ -161,16 +285,10 @@ li {
 }
 
 .contactimg {
-    height: 60px;
+    height: 45px;
     padding-left: 10px;
     padding-right: 10px;
     animation: fadein 3s;
-}
-
-
-.navbar {
-    height: 80px;
-    position: relative;  
 }
 
 .fade {
