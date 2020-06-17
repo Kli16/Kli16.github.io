@@ -76,11 +76,11 @@ function showDivs(n) {
   caps[slideIndex-1].style.display = "none";
   }
   slideIndex = n;
-  
-  if (n > x.length) {slideIndex = 1}    
+
+  if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
     caps[slideIndex-1].style.display = "block";
-    setTimeout(() => { fadeIn(x[slideIndex-1], 200);}, 150);
+    setTimeout(() => { fadeIn(x[slideIndex-1], 400);}, 150);
     for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" units-color", "");
     }

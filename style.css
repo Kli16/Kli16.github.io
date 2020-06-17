@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,300&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -19,60 +18,67 @@ body {
     bottom: 0px;
     width: 100%;
     background-color: #343540;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .body#home:target .row {
     animation: fadein 1.3s;
 }
 
-.body#code:target .table {
-    animation: fadein 1.3s;
-}
-
-.body#art {
+.body#abt {
     position: absolute;
     margin: 0px;
-    overflow: scroll;
+    overflow: hidden;
     top: 0px;
     bottom: 0px;
     width: 100%;
     height: 100%;
     background-color: #343540;
-    transition: background-color 1.2s ease; 
+    transition: background-color 1.2s ease;
     opacity: 0;
     pointer-events: none;
 }
 
-.body#art:target {
+.body#abt:target {
     background-color: ghostwhite;
     opacity: 1;
-    pointer-events: auto; 
-}
-
-.body#code {
-    position: absolute;
-    margin: 0px;
-    overflow: scroll;
-    top: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: #343540;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.body#code:target {
-    opacity: 1;
-    pointer-events: auto; 
+    pointer-events: auto;
 }
 
 p, a{
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
     color: lightgray;
-    line-height: 1.6;
+    line-height: 1.3;
+}
+
+.big{
+  font-size: 50px;
+  transition: all .3s;
+  cursor: default;
+  -webkit-user-select: none;
+}
+
+.big:hover{
+  color: orange;
+}
+
+.dark-mode{
+  color: #343540 !important;
+}
+
+.navtext {
+    font-family: 'DM Mono', monospace;
+    color: lightgray;
+    font-style: normal !important;
+}
+
+.navtext:hover {
+    font-style: normal !important;
+}
+
+.closed {
+    font-style: italic !important;
 }
 
 a {
@@ -105,44 +111,44 @@ a {
     .body#home {
         overscroll-behavior: contain;
     }
-    
-    
+
+
     .body#code {
-        
+
     }
-    
+
     .picture {
         width: 100%;
     }
-    
+
     .column {
         width: 100%;
         padding-left: 6%;
         padding-right: 6% !important;
         text-align: center;
     }
-    
+
     p {
         font-size: 18px;
     }
-    
+
     .about {
         padding-right: 0 !important;
         top: 100%;
         padding-top: 0 !important;
     }
-    
+
     .contactrow {
         padding-right: 0 !important;
     }
-    
+
     .nav {
         width: 100%;
         display: inline-block;
         justify-content: center !important;
         text-align: center;
     }
-    
+
     .kevin {
         width: 100%;
         display: flex;
@@ -150,58 +156,55 @@ a {
         text-align: center;
         justify-content: flex-end;
     }
-    .navimag {
-        height: 20px !important;
-    }
     .kevimg {
         display: inline-block !important;
         height: 38px !important;
     }
-    
+
     ul {
         padding-top: 3px !important;
     }
     li {
         display: inline-block;
     }
-    
+
     .navbar {
         padding-top: 10px;
         display: inline-block;
     }
-    
+
     .profpic {
         width: 60%;
         padding-bottom: 0;
     }
-    
+
     .units {
-        width: 10% !important;
+      width: 10% !important;
     }
-    
+
     .units-color {
         width: 10% !important;
     }
-    
+
     .special {
         width: 30%;
     }
-    
+
     .project-wrapper {
         width: 100% !important;
         height: 20% !important;
         margin-top: 5%;
         margin-bottom: 5%;
     }
-    
+
     .table {
         height: 100% !important;
     }
-    
+
     .proj-graphic {
         filter: grayscale(0%) !important;
     }
-    
+
 }
 
 @media screen and (max-width: 800px) and (min-width: 431px) {
@@ -240,9 +243,7 @@ li {
 }
 
 .nav {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2%;
+    padding-left: 3%;
 }
 
 #github {
@@ -259,22 +260,13 @@ li {
     width:80%;
 }
 
-.navimag {
-    height: 35px;
-    transition: height .4s;
-}
-
 .kevimg {
     height: 38px;
 }
 
 .navbar {
     height: 80px;
-    position: relative;  
-}
-
-.navimag:hover {
-    height: 46px;
+    position: relative;
 }
 
 .close {
@@ -311,6 +303,15 @@ li {
     justify-content:center;
     position: relative;
     float: left;
+    overflow: hidden;
+}
+
+.caption {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+    float: left;
 }
 
 .artimg {
@@ -322,7 +323,7 @@ li {
     padding-bottom: 2%;
     align-items:center;
     justify-content:center;
-    opacity: 0;
+    opacity: 1;
 }
 
 .artimg-sub {
@@ -334,13 +335,16 @@ li {
     text-align: center;
     float: left;
 }
-  
+
 .artcap {
     color: darkgray;
     font-size: 18px;
     text-align: center;
     position:relative;
     display: none;
+    width: 80%;
+    padding-left: 20%;
+    height: 5%
 }
 
 .slide-wrapper {
@@ -414,7 +418,7 @@ li {
     width: 45%;
     height: 98%;
     display: inline-block;
-    vertical-align: text-top;   
+    vertical-align: text-top;
 }
 
 .graphic-wrapper {
@@ -422,7 +426,7 @@ li {
     height: 100%;
     text-align: center;
     padding: 5%;
-    vertical-align: middle; 
+    vertical-align: middle;
     display: flex;
     align-items: center;
     float: left;
@@ -434,7 +438,7 @@ li {
     max-width: 100%;
     filter: grayscale(90%);
     transition: filter .4s;
-    
+
 }
 
 .proj-graphic:hover {
@@ -470,4 +474,3 @@ li {
 .proj-desc {
     font-size: 16px;
 }
-
