@@ -107,7 +107,20 @@ a {
     text-align: center;
 }
 
-@media screen and (max-width: 430px) {
+.mobile {
+  display: none;
+  padding: 10%;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+      background: white;
+    }
     .body#home {
         overscroll-behavior: contain;
     }
