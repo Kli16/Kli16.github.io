@@ -67,6 +67,10 @@ p, a{
   color: #343540 !important;
 }
 
+.small-font{
+  font-size: 16px;
+}
+
 .navtext {
     font-family: 'DM Mono', monospace;
     color: lightgray;
